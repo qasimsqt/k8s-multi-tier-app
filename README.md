@@ -24,9 +24,9 @@ Technologies Used
 
 ---
 
-## 🚀 How to Deploy
+##  How to Deploy
 
-> 📝 This project assumes you already have a running Kubernetes cluster (via `kubeadm`, Minikube, etc.)
+> This project assumes you already have a running Kubernetes cluster (via `kubeadm`, Minikube, etc.)
 
 ### 1. Clone the Repository
 ```bash
@@ -49,6 +49,21 @@ kubectl apply -f ingress.yaml
 OR SIMPLY RUN TO APPLY ALL FILE at once:
 ```bash
 kubectl apply -f .
+```
+
+## Accessing the Application
+
+If you're using Minikube, run:
+```bash
+minikube tunnel
+```
+
+Then access:
+```bash
+http://yourapp.local
+```
+⚠️ Make sure to update your /etc/hosts file:
+
 
 
 
