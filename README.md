@@ -62,7 +62,7 @@ Then access:
 ```bash
 http://yourapp.local
 ```
-⚠️ Make sure to update your /etc/hosts file:
+⚠️ Make sure to update your /etc/hosts file
 
 
 
