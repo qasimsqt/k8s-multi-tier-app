@@ -33,8 +33,10 @@ Technologies Used
 git clone https://github.com/YOUR_USERNAME/k8s-multi-tier-app.git
 cd k8s-multi-tier-app/
 
+```
 AND THEN RUN:
 
+```bash
 kubectl apply -f secret.yaml
 kubectl apply -f configmap.yaml
 kubectl apply -f backend-deployment.yaml
@@ -42,8 +44,11 @@ kubectl apply -f backend-service.yaml
 kubectl apply -f frontend-deployment.yaml
 kubectl apply -f frontend-service.yaml
 kubectl apply -f ingress.yaml
+```
 
-OR SIMPLY RUN "kubectl apply -f ."
+OR SIMPLY RUN TO APPLY ALL FILE at once:
+```bash
+kubectl apply -f .
 
 
 
