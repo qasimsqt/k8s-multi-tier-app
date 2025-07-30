@@ -1,0 +1,12 @@
+# Service to expose MongoDB to frontend apps
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend
+  ports:
+  - port: 27017
+    targetPort: 27017
+  type: ClusterIP # BRUH THIS ONE CAN'T BE NODEPORT AT ALLLL!!
