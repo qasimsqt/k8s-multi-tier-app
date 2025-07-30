@@ -1,0 +1,19 @@
+# Ingress resource to route traffic to the frontend
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: ~~~blablaapp.local~~~  # Change this to match your local DNS or domain, BTW YE EASILY available hai online from k8s docs
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend-service
+            port:
+              number: 80
