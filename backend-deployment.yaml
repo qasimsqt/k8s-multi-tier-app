@@ -1,0 +1,31 @@
+# Deployment for the MongoDB backend
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:latest  # YAAR YE KUCH NAHI HAI BS DATABSE IMAGE HAI DON'T START GETTING CONFUSED BT STUPID SECRETS
+        ports:
+        - containerPort: 27017
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: username # YAHAN VALUES DENA
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: password # YAHAN VALUES DENA
