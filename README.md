@@ -30,7 +30,7 @@ Technologies Used
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/k8s-multi-tier-app.git
+git clone https://github.com/qasim22/k8s-multi-tier-app.git
 cd k8s-multi-tier-app/
 
 ```
