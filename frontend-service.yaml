@@ -1,0 +1,12 @@
+# Service to expose the frontend app within the cluster
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  selector:
+    app: frontend
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP # BECAUSE HUMNE CLUSTER KE ANDR SE YE ACCES KRNI
