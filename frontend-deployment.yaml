@@ -1,0 +1,21 @@
+# Deployment for the NGINX frontend
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1  # Start with 1 replica
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest  # Official NGINX image, Bhai don't forget to use asli image
+        ports:
+        - containerPort: 80 #Nginx chalta hai port 80 pr but we can change it too
+        
