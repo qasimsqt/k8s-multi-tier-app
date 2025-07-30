@@ -1,0 +1,8 @@
+# ConfigMap to store non-sensitive environment variables
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  APP_ENV: "production" # not very needed but just using it for the sake of it
+  LOG_LEVEL: "info"
